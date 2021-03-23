@@ -3,7 +3,6 @@
 <head>
 <script>
 function doRemoveSpaceRow() {
-  try {
   let text = document.getElementById('inTextArea').value.replace(/\r\n|\r/g, "\n");
   let lines = text.split('\n');
   let outText = "";
@@ -18,9 +17,6 @@ function doRemoveSpaceRow() {
   outTextArea.readOnly = false;
   outTextArea.textContent = outText;
   outTextArea.readOnly = true;
-  } catch (e) {
-    alert(e.message);
-  }
 }
 </script>
 </head>
